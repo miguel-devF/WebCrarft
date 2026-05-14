@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebCraft — Seu Site. Do Zero ao Ar.</title>
+
+  <!-- Pré-carrega a fonte para evitar layout shift -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-trail" id="cursorTrail"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">Web<span>Craft</span></a>
+      <nav class="nav-links">
+        <a href="#como-funciona">Como Funciona</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#confie">Confiança</a>
+        <a href="#segmentos">Segmentos</a>
+        <a href="#contato" class="btn-nav">Quero meu site →</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#como-funciona">Como Funciona</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#confie">Confiança</a>
+      <a href="#segmentos">Segmentos</a>
+      <a href="#contato">Quero meu site →</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-inner">
+      <!-- COLUNA ESQUERDA -->
+      <div class="hero-content">
+        <div class="hero-badge reveal">✦ Do zero ao ar em dias</div>
+
+        <h1 class="hero-title reveal">
+          Seu negócio merece<br />
+          um site que<br />
+          <span class="hero-destaque" id="rotatingText">vende/span>
+        </h1>
+
+        <p class="hero-sub reveal">
+          Cuidamos de tudo — estrutura, design e tecnologia.<br />
+          Você só precisa trazer as suas ideias.
+        </p>
+
+        <div class="hero-actions reveal">
+          <a href="#contato" class="btn-primary">Começar agora <span class="arrow">→</span></a>
+          <a href="#como-funciona" class="btn-ghost">Ver como funciona</a>
+        </div>
+
+        <div class="hero-stats reveal">
+          <div class="stat">
+            <span class="stat-num" data-target="320">0</span><span class="stat-suf">+</span>
+            <p>Sites entregues</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="98">0</span><span class="stat-suf">%</span>
+            <p>Clientes satisfeitos</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="7">0</span><span class="stat-suf"> dias</span>
+            <p>Prazo médio</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COLUNA DIREITA -->
+      <div class="hero-visual reveal">
+        <div class="mockup-window">
+          <div class="mockup-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <div class="mockup-url">www.seusite.com.br</div>
+          </div>
+          <div class="mockup-body">
+            <div class="mock-nav"></div>
+            <div class="mock-hero">
+              <div class="mock-h1"></div>
+              <div class="mock-h2"></div>
+              <div class="mock-btn"></div>
+            </div>
+            <div class="mock-cards">
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+              <div class="mock-card"></div>
+            </div>
+          </div>
+        </div>
+        <div class="floating-tag tag-1">✓ Responsivo</div>
+        <div class="floating-tag tag-2">✓ Rápido</div>
+        <div class="floating-tag tag-3">✓ Moderno</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="como-funciona" id="como-funciona">
+    <div class="container">
+      <div class="section-label reveal">Como funciona</div>
+      <h2 class="section-title reveal">Simples assim —<br /><em>sem complicação</em></h2>
+      <p class="section-sub reveal">Você não precisa entender de tecnologia. Nós falamos a sua língua.</p>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-number">01</div>
+          <div class="step-icon">💬</div>
+          <h3>Me conta sua ideia</h3>
+          <p>Uma conversa simples é suficiente. Você descreve o seu negócio e o que quer transmitir — nós anotamos tudo.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-number">02</div>
+          <div class="step-icon">🎨</div>
+          <h3>Criamos o projeto</h3>
+          <p>Nossa equipe transforma suas ideias em layouts, cores e textos. Você aprova cada detalhe antes de avançar.</p>
+        </div>
+        <div class="step-arrow reveal">→</div>
+        <div class="step reveal">
+          <div class="step-number">03</div>
+          <div class="step-icon">🚀</div>
+          <h3>Seu site no ar</h3>
+          <p>Cuidamos do domínio, hospedagem e publicação. Seu site vai ao ar — rápido, seguro e pronto para atrair clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORÇAMENTO -->
+  <section class="orcamento" id="orcamento">
+    <div class="container">
+      <div class="orc-top reveal">
+        <div class="section-label light">Orçamento transparente</div>
+        <h2 class="section-title light">Preço justo,<br />feito para <em>você</em></h2>
+        <p class="orc-intro">Cada negócio é único — e o valor do seu site também. Uma landing page simples, um site completo ou uma loja virtual: o preço é calculado sob medida, sem surpresas.</p>
+      </div>
+      <div class="orc-tipos reveal">
+        <div class="orc-tipo-card">
+          <div class="orc-tipo-icon">⚡</div>
+          <h4>Landing Page</h4>
+          <p>Página única e focada em conversão. Ideal para divulgar um serviço, produto ou campanha específica.</p>
+        </div>
+        <div class="orc-tipo-card destaque">
+          <div class="orc-tipo-icon">🌐</div>
+          <h4>Site Institucional</h4>
+          <p>Apresente sua empresa com profissionalismo. Várias páginas, formulário de contato e tudo que seu negócio precisa.</p>
+        </div>
+        <div class="orc-tipo-card">
+          <div class="orc-tipo-icon">🛒</div>
+          <h4>Loja Virtual</h4>
+          <p>Venda online com carrinho, pagamentos e gestão de pedidos. Sua loja funcionando 24h por dia.</p>
+        </div>
+      </div>
+      <div class="orc-garantias reveal">
+        <div class="orc-garantia"><span class="check">✔</span> Orçamento gratuito em menos de 24h</div>
+        <div class="orc-garantia"><span class="check">✔</span> Preço fechado antes de começar</div>
+        <div class="orc-garantia"><span class="check">✔</span> Parcelas facilitadas disponíveis</div>
+        <div class="orc-garantia"><span class="check">✔</span> Sem cobranças ocultas</div>
+      </div>
+      <div class="orc-cta reveal">
+        <a href="#contato" class="btn-primary">Quero meu orçamento grátis →</a>
+        <p class="orc-obs">Sem compromisso. Respondemos em até 24h.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIANÇA -->
+  <section class="confie" id="confie">
+    <div class="container">
+      <div class="section-label reveal">Por que nos escolher</div>
+      <h2 class="section-title reveal">Você pode <em>confiar</em><br />em cada etapa</h2>
+      <div class="trust-grid">
+        <div class="trust-card reveal">
+          <div class="trust-icon">🛡️</div>
+          <h3>Contrato registrado</h3>
+          <p>Tudo documentado por escrito. Você sabe exatamente o que vai receber, quando e por qual valor.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-icon">🔄</div>
+          <h3>Revisões incluídas</h3>
+          <p>Não gostou de algo? Revisamos até você ficar 100% satisfeito.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-icon">📞</div>
+          <h3>Suporte direto</h3>
+          <p>Fala com quem faz o site. Sem robôs, sem atendentes genéricos — só a equipe que conhece o seu projeto.</p>
+        </div>
+        <div class="trust-card reveal">
+          <div class="trust-icon">🔒</div>
+          <h3>Dados seguros</h3>
+          <p>SSL, backup automático e hospedagem confiável. Seu site e dados dos seus clientes protegidos.</p>
+        </div>
+      </div>
+      <div class="depoimentos reveal">
+        <div class="dep-card">
+          <p>"Achei que seria complicado e caro. Foi o oposto — super fácil, entregaram antes do prazo e o resultado ficou incrível!"</p>
+          <div class="dep-author"><div class="dep-avatar">M</div><span><strong>Maria L.</strong> — Nutricionista</span></div>
+        </div>
+        <div class="dep-card">
+          <p>"Zero stress do meu lado. Só precisei explicar meu negócio, eles cuidaram de todo o resto. Já indiquei para três amigos."</p>
+          <div class="dep-author"><div class="dep-avatar">R</div><span><strong>Rafael S.</strong> — Advogado</span></div>
+        </div>
+        <div class="dep-card">
+          <p>"Minha loja online triplicou as vendas no primeiro mês. O site ficou profissional e agora os clientes confiam mais."</p>
+          <div class="dep-author"><div class="dep-avatar">A</div><span><strong>Ana P.</strong> — Loja de moda</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <div class="section-label reveal">O que entregamos</div>
+      <h2 class="section-title reveal">Tudo que seu site<br />precisa — <em>incluso</em></h2>
+      <div class="servicos-grid">
+        <div class="servico-item reveal"><span>01</span><h4>Design Personalizado</h4><p>Visual único para sua marca — nunca templates genéricos.</p></div>
+        <div class="servico-item reveal"><span>02</span><h4>Mobile First</h4><p>Perfeito em celular, tablet e computador — sempre.</p></div>
+        <div class="servico-item reveal"><span>03</span><h4>SEO Básico</h4><p>Configurado para aparecer no Google desde o primeiro dia.</p></div>
+        <div class="servico-item reveal"><span>04</span><h4>Velocidade Otimizada</h4><p>Sites rápidos convertem mais. Entregamos sites rápidos.</p></div>
+        <div class="servico-item reveal"><span>05</span><h4>Loja Virtual</h4><p>Venda online com carrinho, pagamento e gestão de pedidos.</p></div>
+        <div class="servico-item reveal"><span>06</span><h4>Blog / Conteúdo</h4><p>Área de artigos para atrair visitantes e gerar autoridade.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGMENTOS -->
+  <section class="segmentos" id="segmentos">
+    <div class="container">
+      <div class="section-label reveal">Para todos os negócios</div>
+      <h2 class="section-title reveal">Funciona para <em>qualquer</em><br />tipo de empresa</h2>
+      <div class="seg-track-wrap">
+        <div class="seg-track">
+          <div class="seg-pill">🏥 Clínicas & Saúde</div>
+          <div class="seg-pill">⚖️ Advogados</div>
+          <div class="seg-pill">🍕 Restaurantes</div>
+          <div class="seg-pill">🏗️ Construtoras</div>
+          <div class="seg-pill">👗 Moda & Beleza</div>
+          <div class="seg-pill">🎓 Educação</div>
+          <div class="seg-pill">🔧 Prestadores de Serviço</div>
+          <div class="seg-pill">🏠 Imobiliárias</div>
+          <div class="seg-pill">📸 Fotógrafos</div>
+          <div class="seg-pill">💼 Consultores</div>
+          <div class="seg-pill">🐾 Pet shops</div>
+          <div class="seg-pill">🎨 Designers</div>
+          <div class="seg-pill">🏥 Clínicas & Saúde</div>
+          <div class="seg-pill">⚖️ Advogados</div>
+          <div class="seg-pill">🍕 Restaurantes</div>
+          <div class="seg-pill">🏗️ Construtoras</div>
+          <div class="seg-pill">👗 Moda & Beleza</div>
+          <div class="seg-pill">🎓 Educação</div>
+          <div class="seg-pill">🔧 Prestadores de Serviço</div>
+          <div class="seg-pill">🏠 Imobiliárias</div>
+          <div class="seg-pill">📸 Fotógrafos</div>
+          <div class="seg-pill">💼 Consultores</div>
+          <div class="seg-pill">🐾 Pet shops</div>
+          <div class="seg-pill">🎨 Designers</div>
+        </div>
+      </div>
+      <p class="seg-cta reveal">Não importa o seu ramo — temos experiência e entregamos resultados.</p>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div class="cta-blob"></div>
+        <div class="cta-text">
+          <div class="section-label light">Pronto para começar?</div>
+          <h2>Vamos construir<br />o seu site <em>agora</em></h2>
+          <p>Conte um pouco sobre seu negócio e receba um orçamento sem compromisso em menos de 24 horas.</p>
+        </div>
+        <form class="cta-form" id="ctaForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" id="nome" placeholder="Seu nome" required />
+              <label for="nome">Seu nome</label>
+            </div>
+            <div class="form-group">
+              <input type="tel" id="whatsapp" placeholder="WhatsApp" required />
+              <label for="whatsapp">WhatsApp</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" id="negocio" placeholder="Qual é o seu negócio?" required />
+            <label for="negocio">Qual é o seu negócio?</label>
+          </div>
+          <div class="form-group">
+            <textarea id="ideia" rows="3" placeholder="Descreva sua ideia (pode ser curto!)"></textarea>
+            <label for="ideia">Sua ideia</label>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span class="btn-text">Quero meu orçamento grátis →</span>
+            <span class="btn-loading" style="display:none">Enviando...</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✅ Recebemos! Entraremos em contato em até 24h.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a href="#" class="logo">Web<span>Craft</span></a>
+          <p>Transformando ideias em sites que vendem.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#como-funciona">Como Funciona</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#confie">Confiança</a>
+          <a href="#contato">Orçamento</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="WhatsApp">Wpp</a>
+          <a href="#" aria-label="LinkedIn">Li</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 WebCraft. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
