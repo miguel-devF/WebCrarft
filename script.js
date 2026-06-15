@@ -164,7 +164,7 @@ if (ctaForm) {
     const negocio  = document.getElementById('negocio').value.trim();
     const ideia    = document.getElementById('ideia').value.trim();
 
-    if (!nome || !whatsapp || !negocio) {
+    if (!nome || !negocio) {
       shakeForm();
       return;
     }
@@ -180,18 +180,19 @@ if (ctaForm) {
    🏢 Negócio: ${negocio}
    💡 Ideia: ${ideia || 'Não informado'}`;
 
-    const numero = '5527999999999'; // 👈 troca pelo seu número
+    const numero = '5527997474351'; // 👈 troca pelo seu número
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
     window.open(url, '_blank');
 
-    formSuccess.style.display = 'block';
     ctaForm.reset();
-    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    setTimeout(() => { formSuccess.style.display = 'none'; }, 6000);
-
     btnText.style.display    = 'inline';
     btnLoading.style.display = 'none';
+
+    setTimeout(() => {
+      window.location.href = 'obrigado.html';
+    }, 400);
+
   });
 }
 function shakeForm() {

@@ -1069,3 +1069,197 @@ body:hover .cursor { opacity: 1; }
 
 /* ===== SELECTION ===== */
 ::selection { background: var(--orange); color: var(--white); }
+
+/* ===== BOTÃO FLUTUANTE WHATSAPP ===== */
+.whatsapp-float {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 8000;
+  background: #25D366;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.45);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: wppPulse 2.5s ease-in-out infinite;
+}
+.whatsapp-float:hover {
+  transform: scale(1.12);
+  box-shadow: 0 8px 36px rgba(37,211,102,0.6);
+  animation: none;
+}
+.whatsapp-float:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  background: var(--dark2);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.1);
+  opacity: 0;
+  transform: translateX(8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+@keyframes wppPulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(37,211,102,0.45); }
+  50%       { box-shadow: 0 4px 40px rgba(37,211,102,0.75); }
+}
+
+@media (max-width: 600px) {
+  .whatsapp-float { bottom: 20px; right: 20px; width: 52px; height: 52px; }
+}
+
+/* ===== PÁGINA DE OBRIGADO ===== */
+.obrigado-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 24px;
+}
+
+.obrigado-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.obrigado-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 580px;
+}
+
+.obrigado-icon {
+  width: 90px;
+  height: 90px;
+  background: rgba(37,211,102,0.12);
+  border: 2px solid rgba(37,211,102,0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.6rem;
+  margin: 0 auto 32px;
+  animation: popIn 0.6s cubic-bezier(0.175,0.885,0.32,1.275) both;
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.obrigado-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  animation: fadeUp 0.6s ease 0.2s both;
+}
+.obrigado-title span { color: var(--orange); }
+
+.obrigado-sub {
+  color: var(--light-gray);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 40px;
+  animation: fadeUp 0.6s ease 0.35s both;
+}
+
+.obrigado-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 48px;
+  animation: fadeUp 0.6s ease 0.45s both;
+}
+
+.obrigado-step {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  text-align: left;
+}
+
+.obrigado-step-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.obrigado-step p { color: var(--light-gray); font-size: 0.92rem; line-height: 1.5; }
+.obrigado-step strong { color: var(--white); }
+
+.obrigado-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s ease 0.55s both;
+}
+
+.btn-wpp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: var(--white);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px 28px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: var(--trans);
+  box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+}
+.btn-wpp:hover { transform: translateY(-3px); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+
+.redirect-msg {
+  margin-top: 32px;
+  color: var(--gray);
+  font-size: 0.82rem;
+  animation: fadeUp 0.6s ease 0.65s both;
+}
+#countdown { color: var(--orange); font-weight: 700; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
