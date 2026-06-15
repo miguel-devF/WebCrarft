@@ -161,7 +161,6 @@ if (ctaForm) {
     e.preventDefault();
 
     const nome     = document.getElementById('nome').value.trim();
-    const whatsapp = document.getElementById('whatsapp').value.trim();
     const negocio  = document.getElementById('negocio').value.trim();
     const ideia    = document.getElementById('ideia').value.trim();
 
@@ -175,35 +174,26 @@ if (ctaForm) {
     btnText.style.display    = 'none';
     btnLoading.style.display = 'inline';
 
-    try {
-      const response = await fetch('https://formspree.io/f/mojrzlda', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          nome,
-          whatsapp,
-          negocio,
-          ideia: ideia || '(não informado)',
-        }),
-      });
+    const mensagem = `Olá! Vim pelo site e quero um orçamento.
 
-      if (response.ok) {
-        formSuccess.style.display = 'block';
-        ctaForm.reset();
-        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        setTimeout(() => { formSuccess.style.display = 'none'; }, 6000);
-      } else {
-        alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
-      }
-    } catch (err) {
-      alert('Erro de conexão. Verifique sua internet e tente novamente.');
-    } finally {
-      btnText.style.display    = 'inline';
-      btnLoading.style.display = 'none';
-    }
+   👤 Nome: ${nome}
+   🏢 Negócio: ${negocio}
+   💡 Ideia: ${ideia || 'Não informado'}`;
+
+    const numero = '5527999999999'; // 👈 troca pelo seu número
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+    window.open(url, '_blank');
+
+    formSuccess.style.display = 'block';
+    ctaForm.reset();
+    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    setTimeout(() => { formSuccess.style.display = 'none'; }, 6000);
+
+    btnText.style.display    = 'inline';
+    btnLoading.style.display = 'none';
   });
 }
-
 function shakeForm() {
   const box = document.querySelector('.cta-form');
   box.style.animation = 'none';
