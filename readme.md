@@ -18,8 +18,5 @@ Site institucional desenvolvido para apresentar serviços de criação de sites 
 - Animações e efeitos visuais
 - Página de obrigado com redirecionamento automático
 
-## 📦 Como usar
-Basta abrir o `index.html` no navegador ou usar a extensão Live Server no VS Code.
-
 ## 📬 Contato
 Qualquer dúvida, entre em contato pelo WhatsApp: (27) 99747-4351
